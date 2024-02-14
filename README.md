@@ -9,11 +9,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * (optional) Set default buildpack
 pack config default-builder <bp-id>
 
-## Test buildpacks lyfecycle
+## 1/ Create a custom buildpack 
 
 Following this [buildpack doc: Create a buildpack]( https://buildpacks.io/docs/buildpack-author-guide/create-buildpack/building-blocks-cnb/) with a [CRA app](https://create-react-app.dev/)
 
-1/ Create a custom buildpack 
 
 > Custom buildpack allows you to hook in buildpack lifecycle phases and 
  create your own build  pack.
@@ -43,7 +42,7 @@ Note: when working on macOS to remove warning use  `--platform linux/amd64` see 
 
 In you browser go to `http://localhost:3000`
 
-2/ Create a custom extension
+## 2/ Create a custom extension
 
 > Available as experimental from 0.31.0
 
