@@ -7,11 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Start Docker daemon
 * Intall buildpack: https://buildpacks.io/docs/tools/pack/ 
 * (optional) Set default buildpack
-pack config default-builder <bp-id>
+pack config default-builder heroku/builder:22
 
 ## 1/ Create a custom buildpack 
 
-Following this [buildpack doc: Create a buildpack]( https://buildpacks.io/docs/buildpack-author-guide/create-buildpack/building-blocks-cnb/) with a [CRA app](https://create-react-app.dev/)
+Following this [buildpack doc: Create a buildpack](https://buildpacks.io/docs/buildpack-author-guide/create-buildpack/building-blocks-cnb/) with a [CRA app](https://create-react-app.dev/)
 
 
 > Custom buildpack allows you to hook in buildpack lifecycle phases and 
@@ -31,6 +31,10 @@ Here you can hook on lifecycle: detect, build
 
 2/ Write code to override build phase
 I cutomized the `./node-js-buildpack/bin/detect` and `./node-js-buildpack/bin/build` in my custom buildpack to use a psecific version of node as per tutorial.
+
+> Note: 
+ * Heroku detect open source in [here](https://github.com/heroku/heroku-buildpack-nodejs/blob/main/bin/detect)
+ * Heroku build/compile in [here](https://github.com/heroku/heroku-buildpack-nodejs/blob/main/lib/builddata.sh)
 
 3/ Build with custom buildpack
 ```
